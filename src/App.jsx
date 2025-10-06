@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
+import Heading from './components/Heading'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,10 +12,9 @@ function App() {
       <header className='w-11/12 mx-auto py-3'>
       <Navbar></Navbar>
       </header>
-
-      <main>
-        
-      </main>
+      <section>
+        <Heading>Kitchen Room</Heading>
+      </section>
     </div>
     </>
   )
