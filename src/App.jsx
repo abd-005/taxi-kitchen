@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import { Suspense } from 'react';
 import Navbar from './components/Navbar'
 import Heading from './components/Heading'
-import States from './components/States'
+import OrderContainer from './components/OrderContainer';
 
+const loadOrders = () => fetch("/orders.json").then((res) => res.json());
 
 function App() {
-  const [count, setCount] = useState(0)
+  const ordersPromise = loadOrders();
 
   return (
-    <>
     <div>
       <header className='w-11/12 mx-auto py-3'>
       <Navbar></Navbar>
@@ -17,10 +17,11 @@ function App() {
         <Heading>Kitchen Room</Heading>
       </section>
       <section>
-        <States></States>
+        <Suspense fallback={"Loading ⌛"}>
+          <OrderContainer promise={ordersPromise}></OrderContainer>
+        </Suspense>
       </section>
     </div>
-    </>
   )
 }
 
