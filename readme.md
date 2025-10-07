@@ -263,4 +263,4 @@ export default ServeCard;
 
 ### License
 
-This project was developed by Ferdous Zihad and is licensed under the MIT License.
+This project was developed by Abdul Ahad, inspired by Ferdous Zihad and is licensed under the MIT License.

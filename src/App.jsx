@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Heading from './components/Heading'
+import States from './components/States'
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
       </header>
       <section>
         <Heading>Kitchen Room</Heading>
+      </section>
+      <section>
+        <States></States>
       </section>
     </div>
     </>
